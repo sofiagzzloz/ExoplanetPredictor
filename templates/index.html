@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exoplanet Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='predict.js') }}"></script>
+
+</head>
+<body>
+    <h1>Exoplanet Prediction Form</h1>
+    <form id="predictionForm">
+        <label for="koi_period">Orbital Period(Days):</label>
+        <input type="text" id="koi_period" name="koi_period" required><br><br>
+
+        <label for="koi_time0bk">Transit Epoch:</label>
+        <input type="text" id="koi_time0bk" name="koi_time0bk" required><br><br>
+
+        <label for="koi_impact">Impact Parameter:</label>
+        <input type="text" id="koi_impact" name="koi_impact" required><br><br>
+
+        <label for="koi_duration">Duration of Transits(Hours):</label>
+        <input type="text" id="koi_duration" name="koi_duration" required><br><br>
+
+        <label for="koi_depth">Depth of Transits(Parts per Million):</label>
+        <input type="text" id="koi_depth" name="koi_depth" required><br><br>
+
+        <label for="koi_prad">Planet Radius:</label>
+        <input type="text" id="koi_prad" name="koi_prad" required><br><br>
+
+        <label for="koi_teq">Equilibrium Temperature(Kelvin):</label>
+        <input type="text" id="koi_teq" name="koi_teq" required><br><br>
+
+        <label for="koi_insol">Insolation Flux:</label>
+        <input type="text" id="koi_insol" name="koi_insol" required><br><br>
+
+        <label for="koi_model_snr">Signal to Noise Ratio:</label>
+        <input type="text" id="koi_model_snr" name="koi_model_snr" required><br><br>
+
+        <label for="koi_steff">Stellar Effective Temperature(Kelvin):</label>
+        <input type="text" id="koi_steff" name="koi_steff" required><br><br>
+
+        <label for="koi_slogg">Stellar surface gravity(log10(cm/s^2)):</label>
+        <input type="text" id="koi_slogg" name="koi_slogg" required><br><br>
+
+        <label for="koi_srad">Stellar Radius:</label>
+        <input type="text" id="koi_srad" name="koi_srad" required><br><br>
+
+        <label for="ra">Right Ascension(Degrees):</label>
+        <input type="text" id="ra" name="ra" required><br><br>
+
+        <label for="dec">Declination(Degrees):</label>
+        <input type="text" id="dec" name="dec" required><br><br>
+
+        <label for="koi_kepmag"> Kepler Band Magnitude</label>
+        <input type="text" id="koi_kepmag" name="koi_kepmag" required><br><br>
+
+
+        <input type="submit" value="Predict">
+    </form>
+
+    <div id="predictionResult"></div>
+
+    <script src="predict.js"></script>
+</body>
+</html>

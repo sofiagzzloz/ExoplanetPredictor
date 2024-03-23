@@ -1,27 +1,7 @@
 import pandas as pd
 
 file_path = '/Users/sofiagonzalez/Desktop/exoplanet.csv'
-
-# Loading the dataset by skipping initial comment lines
-kepler_data = pd.read_csv(file_path, comment='#')
-
-# Displaying the first few rows of the dataset to understand its structure and contents
-kepler_data.head()
-
-
-# Import statements
-from sklearn.model_selection import train_test_split #splitting the data set
-from sklearn.ensemble import RandomForestClassifier #select the random forest algorithm
-from sklearn.metrics import accuracy_score, classification_report #evaluating the model accuracy
-from sklearn.impute import SimpleImputer #for the missing values
-from sklearn.preprocessing import LabelEncoder #encoding labels. from labels into numerical form
-import pandas as pd
-
-try:
     kepler_data = pd.read_csv(file_path, comment='#', low_memory=False)
-except FileNotFoundError:
-    print(f"File not found at {file_path}. Please check the file path.")
-    exit()
 
 # Check for missing values in the dataset
 if kepler_data.isnull().sum().any():

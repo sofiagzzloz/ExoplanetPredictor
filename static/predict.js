@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             // Display the prediction result
             document.getElementById('predictionResult').textContent = 
-                'Prediction: ' + (data.prediction === 1 ? 'Exoplanet' : 'Not an Exoplanet');
+            //'Prediction: ' + (data.prediction === 1 ? 'Exoplanet' : 'Not an Exoplanet');
+            'Probability of it Being an Exoplanet: ' + (data.prediction);
             console.log('Prediction response:', data);
         })
         .catch(error => {

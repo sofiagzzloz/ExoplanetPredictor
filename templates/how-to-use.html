@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn About Exoplanets</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/"><img src="{{ url_for('static', filename='logo.png') }}" alt="Exoplanet Explorer Logo" class="navbar-logo"></a>
+        <a href="/">Home</a>
+        <a href="/learn">Learn</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/how-to-use">How to Use Predictor</a>
+        <a href="/predict">Exoplanet Predictor</a>
+        <a href="/articles">Articles</a>
+    </div>
+ 
+    <header>
+        <h1>Learn How to Use the Exoplanet Predictor</h1>
+        <nav>
+        </nav>
+    </header>
+    <main>
+        <div class="box">
+        <section>
+            <h2>What Features Are We Looking For?</h2>
+            <ul>
+            <p>- Orbital Period(Days)</p>
+            <p>- Transit Epoch</p>
+            <p>- Impact Parameter</p>   
+            <p>- Duration of Transits(Hours)</p> 
+            <p>- Depth of Transits(Parts per Million)</p>
+            <p>- Planet Radius</p>
+            <p>- Equilibrium Temperature(Kelvin)</p>
+            <p>- Insolation Flux</p>
+            <p>- Signal to Noise Ratio</p>
+            <p>- Stellar Effective Temperature(Kelvin)</p>
+            <p>- Stellar surface gravity(log10(cm/s^2))</p>
+            <p>- Stellar Radius</p>
+            <p>- Right Ascension(Degrees)</p>
+            <p>- Declination(Degrees)</p>
+            <p>- Kepler Band Magnitude</p>
+            </ul>
+            <p>There are many more variables that go into Exoplanet research but after running a test, we found that these were the variables that were the most significant and correlated when talking about prediction for other Exoplanets.</p>
+        </section>
+        <section>
+            <h2>Why Are Those Important?</h2>
+            <ul>
+            <p><b>Period (Days):</b> Indicates how long the exoplanet takes to complete one orbit around its star. This is crucial for determining the planet's year length and assessing habitability factors like potential climate stability.</p>
+
+            <p><b>Transit Epoch:</b> The specific time when the exoplanet transits (passes in front of) its star, which helps in predicting future transits and studying the exoplanet's atmosphere through transit spectroscopy.</p>
+                
+            <p><b>Impact Parameter:</b> Related to the tilt of the planet's orbit as seen from Earth; it helps determine how centrally the planet crosses the face of its star during a transit, affecting the observed transit shape and depth.</p>
+                
+            <p><b>Duration of Transits (Hours):</b> How long the transit event lasts, providing insights into the size of the planet, its orbital distance, and sometimes the orbital eccentricity when combined with other data.</p>
+                
+            <p><b>Depth of Transits (Parts per Million):</b> Indicates how much starlight the planet blocks during its transit. This can be used to estimate the planet's size relative to its star.</p>
+                
+            <p><b>Planet Radius:</b> Directly related to the depth of the transit; helps in classifying the planet (e.g., Earth-sized, super-Earth, gas giant).</p>
+                
+            <p><b>Equilibrium Temperature (Kelvin):</b> The theoretical temperature of the planet based on its distance from the star and the star's energy output, important for assessing the planet's potential habitability.</p>
+                
+            <p><b>Insolation Flux:</b> The amount of stellar energy the planet receives, critical for understanding its climate and atmospheric conditions.</p>
+                
+            <p><b>Signal to Noise Ratio:</b> A measure of the data's quality and the detectability of the planet; higher values indicate clearer signals of the planet's presence and characteristics.</p>
+                
+            <p><b>Stellar Effective Temperature (Kelvin):</b> The surface temperature of the star, which affects the radiation environment of the planet and helps in classifying the star.</p>
+                
+            <p><b>Stellar surface gravity (log10(cm/s²)):</b> Indicates the gravity at the star's surface. It's used to understand the star's physical characteristics and, indirectly, the star's influence on the planet.
+                
+            <p><b>Stellar Radius:</b> Size of the star, affecting the total insolation and the transit depth, hence the perceived size of the planet.</p> 
+                
+            <p><b>Right Ascension (Degrees):</b> Essentially the celestial equivalent of longitude, helps in locating the star and its planets in the sky.</p> 
+                
+            <p><b>Declination (Degrees):</b> Comparable to latitude on the celestial sphere, used alongside right ascension to pinpoint the location of celestial objects.</p> 
+                
+            <p><b>Kepler Band Magnitude:</b> The apparent brightness of the star as observed in the specific photometric band used by the Kepler telescope, important for understanding the star's properties and the feasibility of detecting transits.</p> 
+            </ul>   
+            <p>Each of these parameters contributes to the comprehensive study of exoplanets, from initial detection to detailed characterization, including the analysis of their potential habitability, atmospheric composition, and orbital dynamics.</p>
+           
+        </section>
+        <section>
+            <h2>How Can We Find Those Values?</h2>
+            <p>Finding and calculating values related to exoplanets involves a combination of direct observation, data analysis, and theoretical modeling. Here’s how researchers typically determine each of these parameters:</p>
+
+            <ul>
+
+            <p>Orbital Period (Days): Calculated by observing the time interval between successive transits of the exoplanet across its host star or by measuring the periodic changes in the star's radial velocity.</p>
+                
+            <p>Epoch: Determined by observing the exact time when the planet passes in front of its star, which is noted as the start of a transit event.</p>
+                
+            <p>Impact Parameter: Calculated using the transit curve, specifically by analyzing the shape and duration of the transit. The impact parameter relates to the angle at which the planet crosses the star's disc.</p>
+                
+            <p>Duration of Transits (Hours): Measured from the transit light curve, which is the graph of starlight blocked by the planet over time during the transit.</p>
+                
+            <p>Depth of Transits (Parts per Million): Determined from the transit light curve as the percentage of starlight blocked by the planet. It’s a function of both the star's and planet's radii.</p>
+                
+            <p>Planet Radius: Inferred from the transit depth and the radius of the star. The larger the planet, the more starlight it blocks during a transit.</p>
+                
+            <p>Equilibrium Temperature (Kelvin): Calculated based on the star's temperature, the planet's distance from the star, and its albedo (reflectivity), assuming thermal equilibrium.</p>
+                
+            <p>Insolation Flux: Calculated from the star’s luminosity and the planet’s distance from the star, representing the amount of stellar energy received per unit area on the planet.</p>
+                
+            <p>Signal to Noise Ratio (SNR): Determined from observational data; a higher SNR means a clearer detection of the exoplanet against the background noise of stellar activity and other cosmic sources.</p>
+                
+            <p>Stellar Effective Temperature (Kelvin): Measured through spectroscopic analysis of the star’s light, which provides information on the star’s surface temperature.</p>
+                
+            <p>Stellar Surface Gravity (log10(cm/s²)): Derived from spectroscopic studies and stellar models, indicating the gravitational pull at the star's surface.</p>
+                
+            <p>Stellar Radius: Often determined from the star’s luminosity and temperature, or directly measured during an exoplanet transit.</p>
+                
+            <p>Right Ascension (Degrees) and 14. Declination (Degrees): Coordinates are found using astronomical databases and star catalogs, measured through telescopic observations.</p>
+                
+            <p>Kepler Band Magnitude: Measured directly by the Kepler telescope or other observatories in specific photometric bands, representing the apparent brightness of the star.</p>
+            </ul>   
+            <p>To obtain these values by yourself, you would need access to astronomical data and instruments like telescopes equipped with photometric and spectroscopic capabilities, as well as software to process and analyze the observations. Researchers use databases like the NASA Exoplanet Archive, where they can find already calculated values for known exoplanets and their host stars. For theoretical calculations, software like MATLAB, Python (with libraries like AstroPy), or professional tools like the Space Telescope Science Data Analysis System (STSDAS) are often used.</p>
+        </section>
+        </div>
+    </main>
+    <div class="box-copy">
+        <footer>
+            <p>&copy; 2024 Exoplanet Explorer. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

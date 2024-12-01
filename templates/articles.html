@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Articles</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+<div class="navbar">
+    <a href="/"><img src="{{ url_for('static', filename='logo.png') }}" alt="Exoplanet Explorer Logo" class="navbar-logo"></a>
+    <a href="/">Home</a>
+    <a href="/learn">Learn</a>
+    <a href="/contact">Contact Us</a>
+    <a href="/how-to-use">How to Use Predictor</a>
+    <a href="/predict">Exoplanet Predictor</a>
+    <a href="/articles">Articles</a>
+</div>
+
+<body>
+    <h1>Article Management System</h1>
+    <div id="articleForm">
+        <input type="text" id="title" placeholder="Title">
+        <textarea id="content" placeholder="Content"></textarea>
+        <input type="text" id="author" placeholder="Author">
+        <button onclick="createArticle()">Submit Article</button>
+    </div>
+    <div id="articles"></div>
+    <script src="app.js"></script>
+</body>
+</html>

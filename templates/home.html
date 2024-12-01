@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exoplanet Explorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='carousel.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='API_APOD.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='API_LIVER.js') }}" defer></script>
+
+
+</head>
+<body>
+    <div class="navbar">
+        <a href="/"><img src="{{ url_for('static', filename='logo.png') }}" alt="Exoplanet Explorer Logo" class="navbar-logo"></a>
+        <a href="/">Home</a>
+        <a href="/learn">Learn</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/how-to-use">How to Use Predictor</a>
+        <a href="/predict">Exoplanet Predictor</a>
+        <a href="/articles">Articles</a>
+    </div>
+
+   <div class="image-next-to-text">
+    <header>
+        <h1> Welcome to Exoplanet Explorer </h1> 
+    </header>
+
+    <main>
+        <div class="box">
+        <section>
+            <h2>Discover the Mysteries of the Universe</h2>
+            <p>Join us on a journey to explore distant worlds and uncover the secrets of exoplanets. In this website you can find more information about exoplanets; its whole purpose is to make space science more accessible to the public. </p>
+        <section>
+            <h2>What is an Exoplanet?</h2>
+            <p>First of all lets start with what's an Exoplanet. An exoplanet is a planet that orbits a star outside our solar system. Discover how scientists find and study these distant worlds, contributing to our understanding of the universe.</p>
+            <p>Want to learn more? <a href="/learn" class="href-color">Click Here</a></p>
+
+        </section>
+        </div>
+
+        <div class="box">
+        <section>
+        <h2>Featured Exoplanets</h2> 
+        <div class="box-for-images">
+            <div class="exoplanet-carousel">
+                <div class="carousel-container">
+                    <div class="exoplanet-item">
+                        <img src="{{ url_for('static', filename='51-Pegasi-b.png') }}" alt="51-Pegasi-b">
+                        <p>51-Pegasi-b</p>
+                    </div>
+                    <div class="exoplanet-item">
+                        <img src="{{ url_for('static', filename='Kepler22b.png') }}" alt="Kepler 22 b">
+                        <p>Kepler-22b</p>
+                    </div>
+                    <div class="exoplanet-item">
+                        <img src="{{ url_for('static', filename='TRAPPIST-1e.png') }}" alt="TRAPPIST-1e">
+                        <p>TRAPPIST-1e</p>
+                    </div>
+                    <div class="exoplanet-item">
+                        <img src="{{ url_for('static', filename='ProximaCentaurib.png') }}" alt="Proxima Centauri b">
+                        <p>Proxima Centauri b</p>
+                    </div>
+                    <div class="exoplanet-item">
+                        <img src="{{ url_for('static', filename='Kepler-452b.png') }}" alt="Kepler-452b">
+                        <p>Kepler-452b</p>
+                    </div>
+                    <div class="exoplanet-item">
+                        <img src="{{ url_for('static', filename='Osiris.png') }}" alt="Osiris">
+                        <p>Osiris</p>
+                    </div>
+                    <div class="exoplanet-item">
+                        <img src="{{ url_for('static', filename='GJ1214b.png') }}" alt="GJ 1214b">
+                        <p>GJ 1214b</p>
+                    </div>
+                    <div class="exoplanet-item">
+                        <img src="{{ url_for('static', filename='Kepler-62f.png')}}" alt="Kepler-62f">
+                        <p>Kepler-62f</p>
+                    </div>
+                    <div class="exoplanet-item">
+                        <img src="{{ url_for('static', filename='K2-18b.png')}}" alt="K2-18b">
+                        <p>K2-18b</p>
+                    </div>
+                    <div class="exoplanet-item">
+                        <img src="{{ url_for('static', filename='WASP12b.png')}}" alt="WASP 12b">
+                        <p>WASP12b</p>
+                    </div>
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>  
+        </section>    
+        </div>
+
+        <div class="box">
+        <section>          
+        <h2>NASA Astronomy Picture of The Day</h2> 
+        <div class="box-for-images">
+            <h2 id="title"></h2>
+            <h3>Date: <span id="date"></span></h3>
+            <img id="pic" src="" alt="NASA Picture Of The Day" width="100%">
+            <p id="explanation"></p>
+        </div>
+        </section>    
+        </div>
+
+        <div class="box">
+        <h2>Virtual Telescope</h2>
+        <div class="box-for-images">
+        <div class="virtual-telescope">
+            <iframe src="https://worldwidetelescope.org/webclient/" width="100%" height="600" style="border:none;"></iframe>
+        </div>
+        </div>
+        </div>
+
+        <div class="box">
+        <h2>Live Feed of Space Events</h2>
+        <div class="box-for-images">
+            <div id="launchData">Upcoming Launches </div>
+        </div>
+        </div>
+        
+    </main> 
+    <div class="box-copy">
+        <footer>
+            <p>&copy; 2024 Exoplanet Explorer. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

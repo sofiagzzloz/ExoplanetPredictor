@@ -1,58 +1,234 @@
-body 
-{
+/* General Styles for Entire Site */
+body {
     font-family: 'Arial', sans-serif;
-    background-color:white;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
     color: #333;
 }
 
-h1
-{
-    color: black;
+h1 {
+    color: #5D5C61;
+}
+/* Navigation Bar Styles */
+.navbar {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    background-color: #001117;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
 }
 
-form 
-{
+.navbar-logo {
+    height: 100px; /* Adjust based on your logo size */
+    margin-right: 10px; /* Space between logo and navigation links */
+}
+.navbar a {
+    margin-right: 20px; /* Space between links */
+    color: #ffffff; /* Light text color for contrast */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 16px; /* Slightly larger text for readability */
+    vertical-align: middle;
+}
+
+.navbar a:hover {
+    text-decoration: underline; /* Adds underline on hover for visual feedback */
+}
+
+/* Styles for Forms (Specific to Prediction Page) */
+#predictionForm {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* Adjust margins to suit your layout, while keeping form more to the left */
 }
-label {
+
+#predictionForm label {
     display: block;
     margin-top: 10px;
 }
 
-input[type="text"],
-input[type="number"],
-select {
-    width: 100%;
+#predictionForm input[type="text"],
+#predictionForm input[type="number"],
+#predictionForm select {
+    width: calc(100% - 16px); /* Adjust width to ensure it fills the container minus padding */
     padding: 8px;
     margin-top: 5px;
     margin-bottom: 20px;
     border-radius: 4px;
     border: 1px solid #ddd;
-    box-sizing: border-box; 
+    box-sizing: border-box; /* Ensures padding doesn't affect the total width */
 }
 
-input[type="submit"] {
-    background-color: #4CAF50;
+#predictionForm input[type="submit"] {
+    background-color: #001117;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width: auto; /* Allows the button to shrink/grow according to its content */
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
+#predictionForm input[type="submit"]:hover {
+    background-color: #4e99cb;
 }
 
 #predictionResult {
     margin-top: 20px;
     padding: 10px;
-    background-color: #d1e7dd;
-    color: #0f5132;
+    background-color: #cce9fcf9;
+    color: #3a77a1;
     border-radius: 4px;
+}
+
+/* Content Section Styles for Home and Learn Pages */
+.content-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #4e99cb; 
+}
+
+p {
+    color: #333;
+    line-height: 1.6; /* Increases line height for better readability */
+    margin-bottom: 20px; /* Ensures consistent spacing between paragraphs */
+    
+}
+
+ul {
+    list-style-type: disc; /* Or any style that fits your design */
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%; /* Ensures images are responsive */
+    height: auto;
+    display: block; /* Removes bottom margin/spacing under images */
+    margin-bottom: 20px; /* Consistent spacing after images */
+    border-radius: 4px; /* Optional: adds rounded corners to images */
+}
+
+/* Additional Button Styles for Consistency */
+.button {
+    display: inline-block;
+    background-color: #3a77a1; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; /* In case you use <a> tags for buttons */
+}
+
+.button:hover {
+    background-color: #3a77a1;
+}
+
+/* Utility Classes for Layout and Spacing */
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* This is the box where all the text goes in */
+.box {
+    display: block;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(8, 7, 7, 0.05);
+    margin: 20px;
+
+}
+
+/* This is the copyright box, the blue one */
+.box-copy {
+    display: block;
+    background-color: #4e99cb;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(8, 7, 7, 0.05);
+}
+
+/* Here we are doing the References/Links color and their hovering colors */
+.href-color{ 
+    color:#001117;
+    text-decoration: underline;
+}
+
+.href-color:hover{
+    color: #3a77a1;
+}
+
+.box-for-images{
+    display: block;
+    background-color:beige;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(8, 7, 7, 0.05);
+    margin: 20px; 
+}
+
+.exoplanet-carousel {
+    position: relative;
+    max-width: 600px; /* Adjust based on your design */
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.exoplanet-item {
+    min-width: 100%; /* Each item takes full width of the carousel */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.exoplanet-item img {
+    width: 100%; /* Adjust image size as needed */
+    height: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+.virtual-telescope iframe {
+    width: 100%;
+    height: 600px; /* or use 'height: 60vh;' to make it based on the viewport height */
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .virtual-telescope iframe {
+        height: 400px; /* Smaller height for smaller devices */
+    }
 }

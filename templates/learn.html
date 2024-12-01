@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn About Exoplanets</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/"><img src="{{ url_for('static', filename='logo.png') }}" alt="Exoplanet Explorer Logo" class="navbar-logo"></a>
+        <a href="/">Home</a>
+        <a href="/learn">Learn</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/how-to-use">How to Use Predictor</a>
+        <a href="/predict">Exoplanet Predictor</a>
+        <a href="/articles">Articles</a>
+    </div>
+    
+    <header>
+        <h1>Learn About Exoplanets</h1>
+        <nav>
+        </nav>
+    </header>
+    <main>
+        <div class="box">
+        <section>
+            <h2>Introduction to Exoplanets</h2>
+            <p>Exoplanets, or extrasolar planets, are planets that orbit stars outside our solar system. With advancements in technology, astronomers have discovered thousands of these fascinating worlds, revealing a rich diversity of planets unlike anything in our solar system.</p>
+        </section>
+        <section>
+            <h2>How Do We Find Exoplanets?</h2>
+            <p>Learn about the methods astronomers use to detect and study exoplanets, including the transit method, radial velocity method, and direct imaging.</p>
+            <p>We have built a built-in predictor that works with AI to predict, and the best part is that you can try it out by clicking <a href="/predict" class="href-color">HERE</a></p>
+            <p>To learn how to use the predictor go <a href="/how-to-use" class="href-color">HERE</a></p>
+        </section>
+        <section>
+            <h2>Why Study Exoplanets?</h2>
+            <p>Studying exoplanets helps us understand the formation and evolution of planetary systems, and it brings us closer to answering the age-old question: Are we alone in the universe?</p>
+        </section>
+        </div>
+    </main>
+    <div class="box-copy">
+        <footer>
+            <p>&copy; 2024 Exoplanet Explorer. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
